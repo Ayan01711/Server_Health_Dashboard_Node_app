@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Server Health</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="bg-blue-600 p-4 text-white flex justify-between items-center">
+    <h1 class="text-xl font-bold">Server Health Dashboard</h1>
+    <button onclick="logout()" class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-600 transition">Logout</button>
+  </nav>
+
+  <!-- Content -->
+  <main class="flex-1 p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">CPU Usage</h2>
+      <p id="cpuUsage" class="text-2xl font-bold text-blue-600 mt-2">--%</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">RAM Usage</h2>
+      <p id="ramUsage" class="text-2xl font-bold text-green-600 mt-2">--%</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">Disk Usage</h2>
+      <p id="diskUsage" class="text-2xl font-bold text-purple-600 mt-2">--%</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">Uptime</h2>
+      <p id="uptime" class="text-2xl font-bold text-orange-600 mt-2">--</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">Hostname</h2>
+      <p id="hostname" class="text-2xl font-bold text-gray-800 mt-2">--</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">Platform</h2>
+      <p id="platform" class="text-2xl font-bold text-gray-800 mt-2">--</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">IP Address</h2>
+      <p id="ip" class="text-2xl font-bold text-gray-800 mt-2">--</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">Processes</h2>
+      <p id="processes" class="text-2xl font-bold text-gray-800 mt-2">--</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <h2 class="text-lg font-semibold text-gray-700">Logged In User</h2>
+      <p id="loggedInUser" class="text-2xl font-bold text-gray-800 mt-2">--</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
