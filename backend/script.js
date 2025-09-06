@@ -6,7 +6,8 @@ import cors from "cors";
 import mysql from "mysql2/promise";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import os from "os-utils";
+import os from "os";          // Node.js built-in module for hostname, platform, uptime
+import osu from "os-utils";   // For CPU usage
 import dotenv from "dotenv";
 
 dotenv.config(); // Load .env file
@@ -105,18 +106,18 @@ app.post("/login", async (req, res) => {
 
 // Metrics API
 app.get("/metrics/latest", authenticateToken, async (req, res) => {
-  os.cpuUsage((cpuPercent) => {
+  osu.cpuUsage((cpuPercent) => {
     res.json({
       cpuUsage: (cpuPercent * 100).toFixed(2) + "%",
       ramUsage:
         (((os.totalmem() - os.freemem()) / os.totalmem()) * 100).toFixed(2) +
         "%",
-      diskUsage: "N/A (demo)",
-      uptime: os.sysUptime() + "s",
+      diskUsage: "N/A (demo)",          // You can integrate diskusage module later
+      uptime: os.uptime() + "s",
       hostname: os.hostname(),
       platform: os.platform(),
       ip: req.socket.remoteAddress,
-      processes: os.processUptime(),
+      processes: process.uptime().toFixed(2) + "s",
       loggedInUser: req.user.username,
     });
   });
