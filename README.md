@@ -104,9 +104,9 @@ docker ps
 
 ##  🔑 Access
 ```bash
-- **Frontend:** http://<server-ip>
-- **Backend API:** http://<server-ip>:5000/metrics/latest
-- **Database:** MySQL inside Docker container
+- Frontend: http://<server-ip>
+- Backend API: http://<server-ip>:5000/metrics/latest
+- Database: MySQL inside Docker container
 ```
 ## Check logs and Database
 - View logs: 
@@ -124,4 +124,5 @@ docker exec -it <container_ID> mysql -u <username> -p <password>
 📌 LinkedIn: [Pathan Ayan](https://www.linkedin.com/in/ayan01711/)  
 📌 GitHub: [Ayan01711](https://github.com/Ayan01711)  
 📌 Instagram: [Ayan01711](https://www.instagram.com/itz_ayan1711/)
+
 
