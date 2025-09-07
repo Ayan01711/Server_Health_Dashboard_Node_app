@@ -9,13 +9,13 @@ This project provides real-time server metrics (CPU, RAM, Disk, Processes, Users
 # 📸 Preview  
 
 ### Login Page  
-![Login Screenshot](./images/01.png)
+![Login Screenshot](./Images/01.png)
 
 ### SignUp Page
 ![Signup Screenshot](./Images/02.png)
 
 ### Dashboard  
-![Dashboard Screenshot](./images/03.png)
+![Dashboard Screenshot](./Images/03.png)
 
 ### Docker Build & Run
 
@@ -124,3 +124,4 @@ docker exec -it <container_ID> mysql -u <username> -p <password>
 📌 LinkedIn: [Pathan Ayan](https://www.linkedin.com/in/ayan01711/)  
 📌 GitHub: [Ayan01711](https://github.com/Ayan01711)  
 📌 Instagram: [Ayan01711](https://www.instagram.com/itz_ayan1711/)
+
